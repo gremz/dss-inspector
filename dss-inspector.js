@@ -56,7 +56,7 @@
       // showAlert('Oh snap! Metering does not live on this page', 'error'); //alpha
       setTimeout( function() {
         checkMetering();
-      }, 3000);
+      }, 2000);
       return;
     }
 
@@ -64,7 +64,7 @@
     // $('.error').remove(); //alpha
 
     ms.getStatus( function(data) {
-      // showAlert('Metering status returned successfully!', 'success');
+      // showAlert('Metering status returned successfully!', 'success'); //alpha
       var formattedData = JSON.stringify(data, null, '\t');
       formattedData = formattedData.replace(/urlPattern\"\:(\s\".+\")/gi, 'urlPattern": <span class="dss_url_pattern_container hidden"><span class="dss_url_pattern_visibility"></span><span class="dss_inspector_url_pattern" >$1</span></span>');// match pattern
       formattedData = formattedData.replace(/\"(.+\"\:)/gi, '<span class="dss_inspector_title">$1').replace(/\"(\:)/gi, ':</span>'); // match titles
@@ -76,7 +76,7 @@
     });
     setTimeout( function() {
       checkMetering();
-    }, 8000);
+    }, 4000);
   };
   checkMetering();
 
